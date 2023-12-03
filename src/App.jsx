@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import userImage from "./assets/user.png";
 import Google from "./assets/google.svg";
 import Facebook from "./assets/facebook.svg";
@@ -70,7 +70,6 @@ function App() {
               className="border-b border-black outline-none w-full text-md"
               placeholder="1a2b3c45"
               onChange={handleChangePassword}
-              required
             />
             {errorPassword && (
               <p className="text-sm text-red-500">{errorPassword}</p>
@@ -98,7 +97,7 @@ function App() {
             ¿ha olvidado su contraseña?
           </a>
 
-          <div className="flex justify-between items-center w-full">
+          <div className="flex justify-between items-center w-full mb-1">
             <div className="bg-[#dc4e41] flex justify-center items-center px-14 py-1 rounded">
               <img
                 src={Google}
