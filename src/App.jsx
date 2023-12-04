@@ -40,7 +40,7 @@ function App() {
           />
         </div>
         <fieldset className="mt-10 border-b border-neutral-300 relative">
-          <legend className="text-xl text-[#1e1e42] text-center uppercase">
+          <legend className="text-xl text-[#1e1e42] text-center uppercase w-full">
             sing up
           </legend>
           <div className="mb-3">
@@ -70,6 +70,7 @@ function App() {
               className="border-b border-black outline-none w-full text-md"
               placeholder="1a2b3c45"
               onChange={handleChangePassword}
+              required
             />
             {errorPassword && (
               <p className="text-sm text-red-500">{errorPassword}</p>
@@ -93,7 +94,7 @@ function App() {
           </div>
         </fieldset>
         <footer className="flex flex-col my-2">
-          <a href="https//google.com" className="mb-3 text-center">
+          <a href="https://google.com" className="mb-3 text-center">
             ¿ha olvidado su contraseña?
           </a>
 

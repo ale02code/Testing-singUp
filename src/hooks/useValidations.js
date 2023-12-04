@@ -7,10 +7,7 @@ export function useValidations() {
   const [errorPassword, setErrorPassword] = useState("");
 
   const handleSubmit = (event) => {
-    if (user.startsWith === " ") {
-      setErrorUser("No puedes dejar este campo vacio");
-      event.preventDefault();
-    } else if (!user.includes('@') || !user.includes('.')) {
+    if (!user.includes('@') || !user.includes('.')) {
       setErrorUser("Este no es un correo valido");
       event.preventDefault();
     } else if (user.includes(" ")) {
@@ -18,7 +15,7 @@ export function useValidations() {
       event.preventDefault();
     }
 
-    if (password === " " || password === "") {
+    if (password === " ") {
       setErrorPassword("Tu contraseña no debe estar vacia");
       event.preventDefault();
     } else if (password.includes(" ")) {
